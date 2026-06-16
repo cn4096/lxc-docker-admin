@@ -1,7 +1,8 @@
 # LXC WebUI
 
 类 PVE 风格的 主机/LXC/Docker/容器/文件/ Web管理界面，偷懒代替ssh,单二进制文件部署，支持X86和ARM .
-<img width="1375" height="782" alt="image" src="https://github.com/user-attachments/assets/12e55f43-af5d-46fc-9f8b-abfc0e1680a0" />
+<img width="1340" height="865" alt="image" src="https://github.com/user-attachments/assets/ffd6d751-8b98-409b-ae1a-b47d1bc3e959" />
+
 
 ## 特性
 
