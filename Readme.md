@@ -20,14 +20,20 @@
 ## 快速开始
 
 
-### 1. 运行
+### 1. 下载运行
 
 ```bash
+
 ## X86
 wget -O lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/refs/heads/main/lxc-webui-linux-amd64-x64
+
 ## ARM
 wget -O lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/refs/heads/main/lxc-webui-linux-arm64-arm64
+
+chomd +x lxc-webui
+
 ./lxc-webui
+
 ```
 
 首次启动会自动生成 `config.yaml`，访问 `http://你的IP:6080`，默认账号：
