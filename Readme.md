@@ -23,6 +23,10 @@
 ### 1. 运行
 
 ```bash
+## X86
+wget -O lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/refs/heads/main/lxc-webui-linux-amd64-x64
+## ARM
+wget -O lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/refs/heads/main/lxc-webui-linux-arm64-arm64
 ./lxc-webui
 ```
 
