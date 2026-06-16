@@ -22,10 +22,20 @@
 
 ### 1. 下载运行
 
++ X86
 ```bash
 
 ## X86
 wget -O lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/refs/heads/main/lxc-webui-linux-amd64-x64
+
+chomd +x lxc-webui
+
+./lxc-webui
+
+```
++ ARM
+  
+```bash
 
 ## ARM
 wget -O lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/refs/heads/main/lxc-webui-linux-arm64-arm64
