@@ -32,7 +32,7 @@
 + 爆破：密码错了5次就要等5分钟，所以，爆破密码，基本上要10年8年的。
  
 ### 0. 系统要求
- debian/ubuntu 有完整的lxc功能,其他系统没有lxc功能.
+ debian/ubuntu 有完整的lxc功能,其他系统openwrt等没有完整的lxc功能.(依赖系统的 `systemctl`)
 
 ### 1. 下载运行
 
