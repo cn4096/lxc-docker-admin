@@ -1,6 +1,6 @@
 # LXC WebUI
 
-类 PVE 风格的 LXC 容器 Web 管理界面，Go + 单 HTML 实现，单二进制部署。
+类 PVE 风格的 LXC 容器 Web 管理界面，单二进制部署。
 
 ## 特性
 
