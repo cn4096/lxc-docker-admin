@@ -60,9 +60,8 @@ chmod +x lxc-webui
 ### 2. 设置开机自启
 
 ```bash
-cp lxc-webui.service /etc/systemd/system/
-systemctl enable --now lxc-webui
-journalctl -u lxc-webui -f   # 查看日志
+wget -O /usr/local/bin/service.set https://raw.githubusercontent.com/cn4096/service_set/main/service.set && chmod +x /usr/local/bin/service.set && echo "✅ 安装成功" || echo "❌ 安装失败"
+service.set lxc-webui
 ```
 
 
