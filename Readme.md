@@ -1,6 +1,6 @@
 # LXC WebUI
 
-类 PVE 风格的 主机/LXC/Docker/容器/文件/ Web管理界面，单二进制部署。
+类 PVE 风格的 主机/LXC/Docker/容器/文件/ Web管理界面，偷懒代替ssh,单二进制部署。
 <img width="1375" height="782" alt="image" src="https://github.com/user-attachments/assets/12e55f43-af5d-46fc-9f8b-abfc0e1680a0" />
 
 ## 特性
