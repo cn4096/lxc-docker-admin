@@ -5,4 +5,4 @@ curl -o lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main
 chmod +x lxc-webui
 service.set -I lxc-webui
 LOCAL_IP=$(hostname -I | awk '{print $1}')
-echo "🔗 请使用 http://$LOCAL_IP:6080 访问服务"
+echo "🔗 请使用 http://$LOCAL_IP:6080 访问服务,用户名密码是: admin admin"
