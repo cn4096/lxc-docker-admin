@@ -10,6 +10,24 @@ else
     exit 1
 fi
 
+WEBUI_FILE="lxc-webui-linux-arm64-arm64"
+
+# 检测系统架构
+ARCH=$(uname -m)
+case "$ARCH" in
+    aarch64 | arm64)
+        WEBUI_FILE="lxc-webui-linux-arm64-arm64"
+        ;;
+    x86_64 | amd64)
+        WEBUI_FILE="lxc-webui-linux-amd64-x64"
+        ;;
+    *)
+        echo "❌ 错误：不支持的系统架构：$ARCH"
+        exit 1
+        ;;
+esac
+echo "✅ 检测到系统架构：$ARCH，使用文件：$WEBUI_FILE"
+
 # 下载 service.set（优先使用 /usr/local/bin，失败则使用 /usr/bin）
 TARGET_DIR="/usr/local/bin"
 [ -d "$TARGET_DIR" ] || TARGET_DIR="/usr/bin"
@@ -25,7 +43,7 @@ echo "✅ 创建程序目录 /opt/lxc-webui/"
 
 # 下载 lxc-webui
 cd /opt/lxc-webui/ || exit 1
-$DOWNLOAD_CMD lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-linux-arm64-arm64 && \
+$DOWNLOAD_CMD lxc-webui "https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/$WEBUI_FILE" && \
 chmod +x lxc-webui && \
 service.set -I lxc-webui && \
 echo "✅ LXC面板设置完成" || \
