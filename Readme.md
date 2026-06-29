@@ -43,11 +43,7 @@
 
 + 支持curl
 ```
-bash <(curl -s https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh)
-
-## 或者
-
-# curl -s https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh | bash
+curl -s https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh | bash
 ```
 
 + 支持wget
