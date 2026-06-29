@@ -10,12 +10,14 @@ else
     exit 1
 fi
 
-# 下载 service.set
-TARGET_DIR="[ -d /usr/local/bin ] && echo /usr/local/bin || echo /usr/bin"; \
-$DOWNLOAD_CMD "$(eval $TARGET_DIR)/service.set" https://raw.githubusercontent.com/cn4096/service_set/main/service.set && \
-chmod +x "$(eval $TARGET_DIR)/service.set" && \
+# 下载 service.set（优先使用 /usr/local/bin，失败则使用 /usr/bin）
+TARGET_DIR="/usr/local/bin"
+[ -d "$TARGET_DIR" ] || TARGET_DIR="/usr/bin"
+
+$DOWNLOAD_CMD "$TARGET_DIR/service.set" https://raw.githubusercontent.com/cn4096/service_set/main/service.set && \
+chmod +x "$TARGET_DIR/service.set" && \
 echo "✅ 绿色程序配置中..." || \
-echo "❌ 安装失败"
+echo "❌ 安装失败 $TARGET_DIR/service.set "
 
 # 创建程序目录
 mkdir -p /opt/lxc-webui/
