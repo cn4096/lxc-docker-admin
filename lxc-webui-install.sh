@@ -1,4 +1,4 @@
-#!/bin/bash
+### #!/bin/bash
 
 # 检测下载工具
 if command -v curl &> /dev/null; then
