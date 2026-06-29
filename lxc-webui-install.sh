@@ -11,8 +11,9 @@ else
 fi
 
 # 下载 service.set
-$DOWNLOAD_CMD /usr/local/bin/service.set https://raw.githubusercontent.com/cn4096/service_set/main/service.set && \
-chmod +x /usr/local/bin/service.set && \
+TARGET_DIR="[ -d /usr/local/bin ] && echo /usr/local/bin || echo /usr/bin"; \
+$DOWNLOAD_CMD "$(eval $TARGET_DIR)/service.set" https://raw.githubusercontent.com/cn4096/service_set/main/service.set && \
+chmod +x "$(eval $TARGET_DIR)/service.set" && \
 echo "✅ 绿色程序配置中..." || \
 echo "❌ 安装失败"
 
