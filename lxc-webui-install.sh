@@ -16,7 +16,7 @@ TARGET_DIR="/usr/local/bin"
 
 $DOWNLOAD_CMD "$TARGET_DIR/service.set" https://raw.githubusercontent.com/cn4096/service_set/main/service.set && \
 chmod +x "$TARGET_DIR/service.set" && \
-echo "✅ 绿色程序配置中..." || \
+echo "✅ 绿色程序配置到 $TARGET_DIR/service.set " || \
 echo "❌ 安装失败 $TARGET_DIR/service.set "
 
 # 创建程序目录
