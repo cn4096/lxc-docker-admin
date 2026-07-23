@@ -97,7 +97,28 @@ chmod +x lxc-webui
 wget -O /usr/local/bin/service.set https://raw.githubusercontent.com/cn4096/service_set/main/service.set && chmod +x /usr/local/bin/service.set && echo "✅ 安装成功" || echo "❌ 安装失败"
 service.set lxc-webui
 ```
+### 命令行启动参数（可选）
 
+程序支持一组可选启动参数，用于**首次部署时预置初始账号与集中管理配置**。查看帮助：
+
+```bash
+./lxc-webui -h
+```
+
+| 参数 | 示例 | 说明 |
+|------|------|------|
+| `-u` | `-u "admin"` | 默认用户名（默认 `admin`） |
+| `-p` | `-p "password"` | 默认密码（默认 `admin`） |
+| `-rs` | `-rs "guest"` | 启用集中管理**服务器**模式，并打开【允许访客凭 ID 远程访问】；参数值作为服务器 token（可为空） |
+| `-rc` | `-rc "url"` | 设置服务器 URL 并启用集中管理**客户端**模式，自动连接该 URL |
+| `-rct` | `-rct "token"` | 集中管理**客户端**连接服务器时使用的 token（可为空） |
+| `-h` | `-h` | 显示参数用法并退出 |
+
+**优先级（关键）：已修改的配置文件 > 启动参数 > 程序内置默认值。**
+
+- `-u` / `-p` **仅在 `config.yaml` 不存在时**用于生成初始账号；配置文件已存在则完全忽略这两个参数（以文件为准）。
+- `-rs` / `-rc` / `-rct` **仅在 `config_relay.json` 不存在时**用于生成初始集中管理配置；配置文件已存在则忽略（以文件为准）。
+- 三者判定都以「配置文件是否存在」为准——即"用户改过配置就以最新配置文件为准，没有配置文件就以启动参数为准，没有启动参数就用默认值"。
 
 
 ## nginx 反代（推荐）
