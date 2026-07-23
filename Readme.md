@@ -102,7 +102,7 @@ service.set lxc-webui
 程序支持一组可选启动参数，用于**首次部署时预置初始账号与集中管理配置**。查看帮助：
 
 ```bash
-./lxc-webui -h
+./lxc-webui-xxx -h
 ```
 
 | 参数 | 示例 | 说明 |
