@@ -54,7 +54,7 @@
 
 + 支持curl
 ```
-curl -s https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh | bash
+sudo curl -s https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh | bash
 ```
 
 + 支持wget
