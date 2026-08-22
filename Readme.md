@@ -54,12 +54,12 @@
 
  `root`用户通过下面脚本可以一键安装，服务自启动,支持`Debian/ubuntu/centos/openwrt`等. 
 
-+ 支持curl
++ 支持`curl`
 ```
 sudo curl -s https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh | bash
 ```
 
-+ 支持wget
++ 支持`wget`
 ```
 wget -O /tmp/lxc-webui-install.sh https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh
 chmod +x /tmp/lxc-webui-install.sh
