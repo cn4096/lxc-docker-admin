@@ -63,7 +63,7 @@
 sudo curl -s https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh | bash
 ```
 
-+ 支持`wget`
++ 仅支持`wget`,例如openwrt
 ```
 wget -O /tmp/lxc-webui-install.sh https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-install.sh
 chmod +x /tmp/lxc-webui-install.sh
