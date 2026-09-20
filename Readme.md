@@ -73,6 +73,8 @@ chmod +x /tmp/lxc-webui-install.sh
 + Android termux安装
 ```
 curl -fsSL https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/termux.sh | bash
+## 如果curl提示openssl错误，执行下面指令更新openssl
+## apt update && apt install -y openssl && yes | pkg upgrade
 ```
 
 ### 1. 下载运行
