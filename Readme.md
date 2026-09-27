@@ -162,6 +162,20 @@ server {
 
 配置反代后，可在防火墙页面添加规则屏蔽 6080 的外部访问。添加此类规则时系统会弹出风险提示，确认后保存即可，WebUI 通过 127.0.0.1 仍可正常访问。
 
+## 开启远程管理
+
+修改config.yaml 中， `remote=true` ,填上你的 `remoteURL` （有公网那台面板,开了域名穿透服务的)
+```
+root@debian0927:# cat /opt/lxc-webui/config.yaml 
+server:
+  port: "6080"
+  # 远程维护：改成 true 并填好 remoteToken/remoteURL 后重启，面板会作为域名穿透客户端
+  # 连到 remoteURL，自动登记 <主机名>-<MAC>.<服务端可用域名后缀> 指向本面板
+  remote: true
+  remoteToken: ""
+  remoteURL: https://app.example.com
+```
+然后重启`systemctl restart  lxc-webui` 便可通过 `journalctl -fu    lxc-webui`看到远程地址。
 
 ## 注意事项
 
