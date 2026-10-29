@@ -54,6 +54,26 @@
 ### 0. 系统要求
  debian/ubuntu 有完整的lxc功能,其他系统openwrt等没有完整的lxc功能.(依赖系统的 `systemctl`)
 
+
+## arm64下载安装
+```
+## wget 下载(2选1)  root用户
+wget -qO /tmp/lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-linux-arm64-arm64 && chmod +x /tmp/lxc-webui && /tmp/lxc-webui install
+
+## curl下载(2选1)  root用户
+curl -fsSL https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-linux-arm64-arm64 -o /tmp/lxc-webui && chmod +x /tmp/lxc-webui && /tmp/lxc-webui install
+```
+
+## x64下载安装
+```
+## wget 下载(2选1) root用户
+wget -qO /tmp/lxc-webui https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-linux-amd64-x64 && chmod +x /tmp/lxc-webui && /tmp/lxc-webui install
+## curl下载(2选1) root用户
+curl -fsSL https://raw.githubusercontent.com/cn4096/lxc-docker-admin/main/lxc-webui-linux-amd64-x64 -o /tmp/lxc-webui && chmod +x /tmp/lxc-webui && /tmp/lxc-webui install
+
+```
+
+
 ### 0.1 一键下载安装
 
  `root`用户通过下面脚本可以一键安装，服务自启动,支持`Debian/ubuntu/centos/openwrt`等. 
